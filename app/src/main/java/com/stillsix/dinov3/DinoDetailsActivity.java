@@ -24,14 +24,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class DinoDetailsActivity extends Activity implements SoundPool.OnLoadCompleteListener, AdapterView.OnItemSelectedListener {
+public class DinoDetailsActivity extends AppCompatActivity implements SoundPool.OnLoadCompleteListener, AdapterView.OnItemSelectedListener {
 
     private int id1;
     private static SoundPool mSoundPool;
-    private ImageView mSoundButton;
+    //private ImageView mSoundButton;
 
     public TextView display_position, display_name;
-    public ImageView display_image, display_dietIcon, display_eraIcon, display_elementIcon;
+    public ImageView display_image, display_dietIcon, display_eraIcon, display_elementIcon, mSoundButton;
 
     public String sDiet, sElement;
 
@@ -39,9 +39,8 @@ public class DinoDetailsActivity extends Activity implements SoundPool.OnLoadCom
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dino_details);
-        /*getActionBar().setDisplayHomeAsUpEnabled(true);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.uxMyToolbar);
-        setSupportActionBar(myToolbar);*/
+        setSupportActionBar(myToolbar);
 
         //initializeViews();
 
@@ -120,12 +119,19 @@ public class DinoDetailsActivity extends Activity implements SoundPool.OnLoadCom
         spinner.setAdapter(spinAdapter) ;
         spinner.setOnItemSelectedListener(this);
 
-        /*mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        //Set up Sound File that plays when page loads
+        mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
 
         id1 = mSoundPool.load(this, R.raw.t_rex, 1);
 
         mSoundPool.setOnLoadCompleteListener(this);
 
+    }
+
+    @Override
+    public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
+        //Set up Speaker Button for Pronounication on Details Page
+        ImageView mSoundButton;
         mSoundButton = (ImageView)findViewById(R.id.soundButton);
         int url = getResources().getIdentifier("speaker", "drawable", this.getPackageName());
         mSoundButton.setImageResource(url);
@@ -136,12 +142,8 @@ public class DinoDetailsActivity extends Activity implements SoundPool.OnLoadCom
                 //hook up sound to button
                 mp.start();
             }
-        });*/
-
-    }
-
-    @Override
-    public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
+        });
+        //Play Sound when page loads
         soundPool.play(id1, 1, 1, 0, 0, 1);
     }
 
@@ -215,28 +217,5 @@ public class DinoDetailsActivity extends Activity implements SoundPool.OnLoadCom
     public void onNothingSelected(AdapterView<?> parent) {
         Toast.makeText(this, "NothingSelected", Toast.LENGTH_SHORT).show();
     }
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
-            case android.R.id.home:
-                Intent upIntent = NavUtils.getParentActivityIntent(this);
-                if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
-                    // This activity is NOT part of this app's task, so create a new task
-                    // when navigating up, with a synthesized back stack.
-                    TaskStackBuilder.create(this)
-                            // Add all of this activity's parents to the back stack
-                            .addNextIntentWithParentStack(upIntent)
-                                    // Navigate up to the closest parent
-                            .startActivities();
-                } else {
-                    // This activity is part of this app's task, so simply
-                    // navigate up to the logical parent activity.
-                    NavUtils.navigateUpTo(this, upIntent);
-                }
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
 }
 
