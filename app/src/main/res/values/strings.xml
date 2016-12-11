@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DinoDictionaryV3</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_spinner">SpinnerActivity</string>
+    <string-array name="dinos_array">
+        <item>Select another Dino</item>
+        <item>Allosaurus</item>
+        <item>Gastonia</item>
+        <item>Pteranodon</item>
+        <item>Styracosaurus</item>
+        <item>Stegosaurus</item>
+    </string-array>
+</resources>

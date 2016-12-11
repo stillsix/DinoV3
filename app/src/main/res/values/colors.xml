@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Green400">#A5D6A7</color>
+    <color name="Green500">#4caf50</color>
+    <color name="Green800">#2E7D32</color>
+    <color name="Orange900">#e65100</color>
+    <color name="Orange800">#EF6C00</color>
+    <color name="Orange600">#FB8C00</color>
+    <color name="Orange500">#FF9800</color>
+    <color name="Orange400">#FFA726</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>

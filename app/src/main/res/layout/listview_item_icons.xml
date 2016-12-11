@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true">
+    <TextView
+        android:id="@+id/dietIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:onClick="onDietClick"
+         />
+    <TextView
+        android:id="@+id/elementIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:onClick="onElementClick"
+         />
+    <TextView
+        android:id="@+id/eraIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+         />
+</LinearLayout>
+<!--
+<ImageView
+android:id="@+id/dietIcon"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentTop="true"
+android:layout_marginBottom="5dp"
+android:layout_marginRight="15dp"
+android:layout_marginTop="5dp"
+android:gravity="center_vertical"
+android:src="@drawable/herbivore_black" />
+<ImageView
+android:id="@+id/elementIcon"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentTop="true"
+android:layout_marginBottom="5dp"
+android:layout_marginRight="15dp"
+android:layout_marginTop="5dp"
+android:gravity="center_vertical"
+android:src="@drawable/land_black" />
+<ImageView
+android:id="@+id/eraIcon"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentTop="true"
+android:layout_marginBottom="5dp"
+android:layout_marginRight="15dp"
+android:layout_marginTop="5dp"
+android:gravity="center_vertical"
+android:src="@drawable/time_black" />-->
